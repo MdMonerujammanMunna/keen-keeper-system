@@ -14,7 +14,7 @@ const Route = () => {
             children: [
                 { index: true, loader: () => fetch('/Data/Data.json'), Component: HomePage },
                 { path: "TImeline", Component: Timelinepages },
-                { path: "FriendDetails", Component: FriendDetails },
+                { path: "FriendDetails/:PersonID", loader: () => fetch('/Data/Data.json'), Component: FriendDetails },
                 { path: "States", Component: States },
             ],
             errorElement: <ErrorPages />,

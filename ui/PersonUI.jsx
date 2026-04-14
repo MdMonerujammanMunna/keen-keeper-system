@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const PersonUI = ({ Value }) => {
     return (
         <>
-            <Link to="/FriendDetails" className="card bg-base-100 shadow-sm">
+            <Link to={`/FriendDetails/${Value.id}`} className="card bg-base-100 shadow-sm">
                 <figure className="px-10 pt-10">
                     <img
                         src={Value.picture}
@@ -15,7 +15,7 @@ const PersonUI = ({ Value }) => {
                     <h2 className="card-title">{Value.name}</h2>
                     <p className='text-[12px] text-[#64748B]'>{Value.days_since_contact}d ago</p>
                     <div className="flex gap-2">
-                        {Value.tags.map(tag =>
+                        {Value.tags.map((tag) =>
                             <>
                                 <p className='text-[#244D3F] bg-[#CBFADB] text-[12px] font-medium px-2 py-1.5 rounded-full uppercase'>{tag}</p>
                             </>

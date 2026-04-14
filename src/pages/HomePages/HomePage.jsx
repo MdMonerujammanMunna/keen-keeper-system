@@ -1,4 +1,3 @@
-import React from 'react';
 
 import HomeCard from '../../component/HomeCard/HomeCard';
 import { useLoaderData } from 'react-router';
@@ -12,7 +11,7 @@ const HomePage = () => {
                     <HomeCard></HomeCard>
                     <h1 className='font-semibold text-2xl mb-4'>Your Friends</h1>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {FatchData.map((Value, index) => <PersonUI key={index} Value={Value}></PersonUI>)}
+                        {FatchData.map((Value) => <PersonUI key={Value.id} Value={Value}></PersonUI>)}
                     </div>
                 </div>
             </div>

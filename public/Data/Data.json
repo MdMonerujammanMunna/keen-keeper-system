@@ -11,7 +11,7 @@
         ],
         "bio": "We studied computer science together and still discuss startups and tech ideas.",
         "goal": 14,
-        "next_due_date": "2026-04-10"
+        "next_due_date": "Apr 10, 2026"
     },
     {
         "id": 2,
@@ -25,7 +25,7 @@
         ],
         "bio": "Colleague from my current job. We often have coffee breaks and talk about career growth.",
         "goal": 14,
-        "next_due_date": "2026-04-16"
+        "next_due_date": "Apr 16, 2026"
     },
     {
         "id": 3,
@@ -40,7 +40,7 @@
         ],
         "bio": "Gym partner who keeps me motivated to stay consistent with workouts.",
         "goal": 10,
-        "next_due_date": "2026-04-19"
+        "next_due_date": "Apr 19, 2026"
     },
     {
         "id": 4,
@@ -55,7 +55,7 @@
         ],
         "bio": "We’ve been friends since school and used to spend vacations together.",
         "goal": 14,
-        "next_due_date": "2026-04-12"
+        "next_due_date": "Apr 12, 2026"
     },
     {
         "id": 5,
@@ -70,7 +70,7 @@
         ],
         "bio": "Lives in my neighborhood. Our families often visit each other.",
         "goal": 10,
-        "next_due_date": "2026-04-15"
+        "next_due_date": "Apr 15, 2026"
     },
     {
         "id": 6,
@@ -85,7 +85,7 @@
         ],
         "bio": "We used to prepare for exams together and still share learning resources.",
         "goal": 7,
-        "next_due_date": "2026-04-18"
+        "next_due_date": "Apr 18, 2026"
     },
     {
         "id": 7,
@@ -99,7 +99,7 @@
         ],
         "bio": "Started as a freelance client, now a good friend to discuss business ideas.",
         "goal": 14,
-        "next_due_date": "2026-04-11"
+        "next_due_date": "Apr 11, 2026"
     },
     {
         "id": 8,
@@ -113,7 +113,7 @@
         ],
         "bio": "My cousin. We share family updates and plan gatherings together.",
         "goal": 10,
-        "next_due_date": "2026-04-20"
+        "next_due_date": "Apr 20, 2026"
     },
     {
         "id": 9,
@@ -127,7 +127,7 @@
         ],
         "bio": "We play football together every weekend and follow international matches.",
         "goal": 12,
-        "next_due_date": "2026-04-17"
+        "next_due_date": "Apr 17, 2026"
     },
     {
         "id": 10,
@@ -142,6 +142,6 @@
         ],
         "bio": "Met in a local book club. We regularly exchange book recommendations.",
         "goal": 7,
-        "next_due_date": "2026-04-21"
+        "next_due_date": "Apr 21, 2026"
     }
 ]

@@ -7,7 +7,6 @@
         "days_since_contact": 20,
         "status": "overdue",
         "tags": [
-            "college",
             "close friend"
         ],
         "bio": "We studied computer science together and still discuss startups and tech ideas.",
@@ -22,8 +21,7 @@
         "days_since_contact": 12,
         "status": "almost due",
         "tags": [
-            "office",
-            "team member"
+            "office"
         ],
         "bio": "Colleague from my current job. We often have coffee breaks and talk about career growth.",
         "goal": 14,
@@ -97,7 +95,6 @@
         "days_since_contact": 15,
         "status": "overdue",
         "tags": [
-            "freelance",
             "client"
         ],
         "bio": "Started as a freelance client, now a good friend to discuss business ideas.",
@@ -112,7 +109,6 @@
         "days_since_contact": 6,
         "status": "on-track",
         "tags": [
-            "cousin",
             "family"
         ],
         "bio": "My cousin. We share family updates and plan gatherings together.",
@@ -127,7 +123,6 @@
         "days_since_contact": 11,
         "status": "almost due",
         "tags": [
-            "football",
             "sports buddy"
         ],
         "bio": "We play football together every weekend and follow international matches.",

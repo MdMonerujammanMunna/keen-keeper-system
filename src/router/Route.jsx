@@ -12,8 +12,9 @@ const Route = () => {
         {
             path: "", Component: Layout,
             children: [
-                { index: true, Component: HomePage },
+                { index: true, loader: () => fetch('/Data/Data.json'), Component: HomePage },
                 { path: "TImeline", Component: Timelinepages },
+                { path: "FriendDetails", Component: FriendDetails },
                 { path: "States", Component: States },
             ],
             errorElement: <ErrorPages />,

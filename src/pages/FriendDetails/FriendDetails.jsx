@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { PiArchiveBold } from "react-icons/pi";
 import { RiDeleteBinLine } from "react-icons/ri";
@@ -7,12 +7,15 @@ import { MdOutlineTextsms } from "react-icons/md";
 import { LuVideo } from "react-icons/lu";
 import { FaClockRotateLeft } from "react-icons/fa6";
 import { useLoaderData, useParams } from 'react-router';
+import { useContext } from "react";
+import { DataContext } from "../../Context/DataContext";
 
 
 const FriendDetails = () => {
     const FatchData = useLoaderData() //All data
     const { PersonID } = useParams() //Click data
 
+    const { CallButtonfun, TextButtonfun, VideoButtonfun } = useContext(DataContext)
     const SelectedPersone = FatchData.find((Person) => Person.id == PersonID)
     return (
         <>
@@ -32,10 +35,8 @@ const FriendDetails = () => {
                                 <p className={`${SelectedPersone.status == "almost due" ? "text-white bg-[#EFAD44]" : SelectedPersone.status == "on-track" ? "text-[#ffffff] bg-[#244D3F]" : "text-[#ffffff] bg-[#EF4444]"} text-[12px] font-medium px-2 py-1.5 rounded-full uppercase`}>{SelectedPersone.status}</p>
                             </div>
                             <div className="flex gap-2">
-                                {SelectedPersone.tags.map((tag) =>
-                                    <>
-                                        <p className='text-[#244D3F] bg-[#CBFADB] text-[12px] font-medium px-2 py-1.5 rounded-full uppercase'>{tag}</p>
-                                    </>
+                                {SelectedPersone.tags.map((tag, index) =>
+                                    <p key={index} className='text-[#244D3F] bg-[#CBFADB] text-[12px] font-medium px-2 py-1.5 rounded-full uppercase'>{tag}</p>
                                 )}
                             </div>
                             <p className='font-medium max-w-88 text-center text-[#64748B]'>" {SelectedPersone.bio} "</p>
@@ -100,15 +101,15 @@ const FriendDetails = () => {
                     <div className="card bg-base-100 shadow-sm mt-6 p-6">
                         <h1 className='text-xl font-medium text-[#244D3F]'>Quick Check-In</h1>
                         <div className="mt-4 grid grid-cols-3  gap-4">
-                            <div className="text-[#1F2937] bg-base-300 py-4 flex items-center flex-col rounded-lg text-center cursor-pointer">
+                            <div onClick={() => CallButtonfun(SelectedPersone)} className="text-[#1F2937] bg-base-300 py-4 flex items-center flex-col rounded-lg text-center cursor-pointer">
                                 <LuPhoneCall className='text-4xl font-bold mb-2' />
                                 <p className='text-[18px]'>Call</p>
                             </div>
-                            <div className="text-[#1F2937] bg-base-300 py-4 flex items-center flex-col rounded-lg text-center cursor-pointer">
+                            <div onClick={() => TextButtonfun(SelectedPersone)} className="text-[#1F2937] bg-base-300 py-4 flex items-center flex-col rounded-lg text-center cursor-pointer">
                                 <MdOutlineTextsms className='text-4xl font-bold mb-2' />
                                 <p className='text-[18px]'>Text</p>
                             </div>
-                            <div className="text-[#1F2937] bg-base-300 py-4 flex items-center flex-col rounded-lg text-center cursor-pointer">
+                            <div onClick={() => VideoButtonfun(SelectedPersone)} className="text-[#1F2937] bg-base-300 py-4 flex items-center flex-col rounded-lg text-center cursor-pointer">
                                 <LuVideo className='text-4xl font-bold mb-2' />
                                 <p className='text-[18px]'>Video</p>
                             </div>

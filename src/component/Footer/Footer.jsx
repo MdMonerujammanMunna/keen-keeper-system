@@ -26,13 +26,12 @@ const Footer = () => {
                         </a>
                     </div>
                 </nav>
-                <hr className='w-[60vw] text-[#1A8862]' />
-                <div className="md:flex md:gap-[20vw] pb-8">
+                <div className="md:flex gap-0 md:gap-100 lg:gap-150 pb-8">
                     <div className="text-nowrap">
                         <p> © {new Date().getFullYear()} KeenKeeper. All right reserved</p>
                     </div>
                     <div className="">
-                        <ul className='flex text-nowrap gap-5'>
+                        <ul className='flex md:flex-col lg:flex-row text-nowrap gap-5'>
                             <li><a href="">Privacy Policy</a></li>
                             <li><a href="">Terms of Service</a></li>
                             <li><a href="">Cookies</a></li>

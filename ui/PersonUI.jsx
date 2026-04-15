@@ -15,10 +15,10 @@ const PersonUI = ({ Value }) => {
                     <h2 className="card-title">{Value.name}</h2>
                     <p className='text-[12px] text-[#64748B]'>{Value.days_since_contact}d ago</p>
                     <div className="flex gap-2">
-                        {Value.tags.map((tag) =>
-                            <>
-                                <p className='text-[#244D3F] bg-[#CBFADB] text-[12px] font-medium px-2 py-1.5 rounded-full uppercase'>{tag}</p>
-                            </>
+                        {Value.tags.map((tag, index) =>
+                            <React.Fragment key={index}>
+                                <p key={index} className='text-[#244D3F] bg-[#CBFADB] text-[12px] font-medium px-2 py-1.5 rounded-full uppercase'>{tag}</p>
+                            </React.Fragment>
                         )}
                     </div>
                     <div className="">

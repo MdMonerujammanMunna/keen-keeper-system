@@ -3,7 +3,6 @@ import { FaPlus } from "react-icons/fa6";
 const HomeCard = () => {
     return (
         <>
-
             <div className="text-center flex flex-col justify-center items-center">
                 <div className="mb-8">
                     <h1 className='text-[#1F2937] font-bold text-[3rem] mb-4'>Friends to keep close in your life</h1>

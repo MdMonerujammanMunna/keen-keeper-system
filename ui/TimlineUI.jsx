@@ -42,7 +42,7 @@ const TimlineUI = ({ Timer }) => {
                                     </>}
                         </div>
                         <div className="">
-                            <h1 className='text-[18px] font-normal text-[#64748B]'><span className='text-xl font-medium text-[#244D3F]'>Meetup</span> {Timer.name} </h1>
+                            <h1 className='text-[18px] font-normal text-[#64748B]'><span className='text-xl font-medium text-[#244D3F]'>{Timer.type}</span> with {Timer.name} </h1>
                             <p className='text-[#64748B] font-medium'>{RunningDate}</p>
                         </div>
                     </div>

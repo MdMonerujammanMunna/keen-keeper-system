@@ -1,5 +1,5 @@
 import { FaPlus } from "react-icons/fa6";
-const HomeCard = () => {
+const HomeCard = ({ FatchData }) => {
     return (
         <>
             <div className="text-center flex flex-col justify-center items-center">
@@ -18,25 +18,25 @@ const HomeCard = () => {
             <div className="grid justify-center gap-4 md:grid-cols-2 lg:grid-cols-4">
                 <div className=" shadow-xl mt-10">
                     <div className="bg-white p-8 text-center rounded-2xl">
-                        <h1 className='mb-2 text-3xl font-bold text-[#244D3F]'>10</h1>
+                        <h1 className='mb-2 text-3xl font-bold text-[#244D3F]'>{FatchData.length}</h1>
                         <p className='text-[#64748B]'>Total Friends</p>
                     </div>
                 </div>
                 <div className=" shadow-2xl mt-10">
                     <div className="bg-white p-8 text-center rounded-2xl">
-                        <h1 className='mb-2 text-3xl font-bold text-[#244D3F]'>10</h1>
+                        <h1 className='mb-2 text-3xl font-bold text-[#244D3F]'>3</h1>
                         <p className='text-[#64748B]'>On Track</p>
                     </div>
                 </div>
                 <div className=" shadow-2xl mt-10">
                     <div className="bg-white p-8 text-center rounded-2xl">
-                        <h1 className='mb-2 text-3xl font-bold text-[#244D3F]'>10</h1>
+                        <h1 className='mb-2 text-3xl font-bold text-[#244D3F]'>6</h1>
                         <p className='text-[#64748B]'>Need Attention</p>
                     </div>
                 </div>
                 <div className=" shadow-2xl mt-10">
                     <div className="bg-white p-8 text-center rounded-2xl">
-                        <h1 className='mb-2 text-3xl font-bold text-[#244D3F]'>10</h1>
+                        <h1 className='mb-2 text-3xl font-bold text-[#244D3F]'>12</h1>
                         <p className='text-[#64748B]'>Interactions This Month</p>
                     </div>
                 </div>

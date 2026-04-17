@@ -2,11 +2,12 @@ import React, { useContext, useEffect, useState } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
 import { DataContext } from '../../Context/DataContext';
 import TimlineUI from '../../../ui/TimlineUI';
+import { IoNotificationsOffOutline } from "react-icons/io5";
 const Timelinepages = () => {
     const { AllSelectedData } = useContext(DataContext)
     const [SortedSelected, setSortedSelected] = useState("")
     const [FilterData, setFilterData] = useState(AllSelectedData) //for data
-    
+
     //  Sort data
     useEffect(() => {
         if (SortedSelected) {
@@ -74,10 +75,23 @@ const Timelinepages = () => {
                                 <li onClick={() => setSortedSelected("Video")}><a>Video</a></li>
                             </ul>
                         </div>
-                        {FilterData.map((Timer, index) => <TimlineUI key={index} SortedSelected={SortedSelected} Timer={Timer}></TimlineUI>)}
+                        {(FilterData.length == 0) ?
+                            <>
+                                <div className="p-8  w-11/12 mx-auto bg-white rounded-xl flex justify-center">
+                                    <div className="flex flex-col items-center gap-6 justify-center my-10">
+                                        <IoNotificationsOffOutline className='text-7xl text-[#64748B]' />
+                                        <h1 className='text-2xl font-medium text-[#64748B]'>No data Found</h1>
+                                    </div>
+                                </div>
+                            </>
+                            :
+                            <>
+                                {FilterData.map((Timer, index) => <TimlineUI key={index} SortedSelected={SortedSelected} Timer={Timer}></TimlineUI>)}
+                            </>
+                        }
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     );
 };

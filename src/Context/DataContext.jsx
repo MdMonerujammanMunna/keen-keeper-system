@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { toast } from "react-toastify";
 
 export const DataContext = createContext();
 
@@ -6,17 +7,44 @@ const DataProvider = ({ children }) => {
     const [AllSelectedData, setAllSelectedData] = useState([])
 
     const CallButtonfun = (SelectedPersone) => {
-        alert("i am button")
+        toast.success(`Call with ${SelectedPersone.name}`, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
         const personWithAction = { ...SelectedPersone, type: "Call" };
         setAllSelectedData([...AllSelectedData, personWithAction])
     }
     const TextButtonfun = (SelectedPersone) => {
-        alert("i am text")
+        toast.success(`Text with ${SelectedPersone.name}`, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
         const personWithAction = { ...SelectedPersone, type: "Text" };
         setAllSelectedData([...AllSelectedData, personWithAction])
     }
     const VideoButtonfun = (SelectedPersone) => {
-        alert("i am video")
+        toast.success(`Video with ${SelectedPersone.name}`, {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
         const personWithAction = { ...SelectedPersone, type: "Video" };
         setAllSelectedData([...AllSelectedData, personWithAction])
     }
